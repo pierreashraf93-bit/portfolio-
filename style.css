@@ -1208,3 +1208,69 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   .section-title { font-size: 1.7rem; }
   .modal-title { font-size: 1.4rem; }
 }
+
+
+/* =========================================
+   PROJECT IMAGES
+   ========================================= */
+
+.project-visual {
+  width: 100%;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+/* Real project screenshots */
+.project-image {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 18px;
+  transition: transform 0.4s ease;
+}
+
+/* Small zoom effect when hovering */
+.project-card:hover .project-image {
+  transform: scale(1.02);
+}
+
+/* Tableau dashboard */
+.project-image-tableau {
+  object-fit: contain;
+  background: #f5f7fa;
+}
+
+/* Airplanes / Booking Flow screenshots */
+.project-image-website {
+  object-fit: cover;
+}
+
+/* Make project visual responsive */
+@media (max-width: 900px) {
+  .project-visual {
+    min-height: 250px;
+  }
+
+  .project-image {
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-visual {
+    min-height: 200px;
+    border-radius: 14px;
+  }
+
+  .project-image {
+    min-height: 200px;
+    border-radius: 14px;
+  }
+}
